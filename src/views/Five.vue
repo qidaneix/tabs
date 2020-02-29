@@ -1,6 +1,7 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>This is an {{ value }} page</h1>
+    <input type="text" v-model="value" />
   </div>
 </template>
 
@@ -9,6 +10,11 @@ import keep from "../mixins/keep";
 
 export default {
   mixins: [keep],
+  data() {
+    return {
+      value: "fiveth"
+    };
+  },
   mounted() {
     // console.log(this.$route);
     // console.log(this.$router);
